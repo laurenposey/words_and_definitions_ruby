@@ -51,4 +51,20 @@ describe(Word) do
       expect(Word.find(test_word.id())).to(eq(test_word))
     end
   end
+
+  describe('#word_meanings') do
+   it("is empty at first") do
+     test_word = Word.new("kitten")
+     expect(test_word.word_meanings()).to(eq([]))
+    end
+  end
+
+  describe('#add_definition') do
+    it("adds a new definition to word") do
+      test_word = Word.new("kitten")
+      test_definition = Definition.new("an adorable little ball of fluff with kitty ears")
+      test_word.add_definition(test_definition)
+      expect(test_word.word_meanings()).to(eq([test_definition]))
+    end
+  end
 end

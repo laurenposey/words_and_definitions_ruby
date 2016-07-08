@@ -1,4 +1,4 @@
-class Definitions
+class Definition
   @@definitions_list = []
 
   define_method(:initialize) do |word_definition|
@@ -9,7 +9,7 @@ class Definitions
   define_method(:word_definition) do
     @word_definition
   end
-  
+
   define_method(:id) do
     @id
   end
