@@ -1,5 +1,3 @@
-require('definition')
-
 class Word
 @@word_list = []
 
@@ -46,7 +44,4 @@ class Word
   define_method(:add_definition) do |definition|
     @word_meanings.push(definition)
   end
-
-
-
 end
