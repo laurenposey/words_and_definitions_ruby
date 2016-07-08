@@ -43,9 +43,9 @@ class Word
     @word_meanings
   end
 
-  define_method(:add_definition) do |definition|
+  define_method(:add_definition) do |definition_parameter|
     word_meanings = []
-    definition = Definition.new(word_definition)
+    definition = Definition.new(definition_parameter)
     definition.save()
     @word_meanings.push(definition)
   end
