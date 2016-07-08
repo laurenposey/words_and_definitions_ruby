@@ -1,0 +1,15 @@
+<div>
+  <h1>Your Dictionary</h1>
+
+  <h2>Click on a word to to view it's definition:</h2>
+  <div>
+    <ul>
+      <% @words.each() do |word| %>
+      <li><a href="/words/<%= word.id() %>"><%= word.word_name() %></a></li>
+      <% end %>
+    </ul>
+  </div>
+  <h2> Or add a <a href ="/words/new">new word</a> </h2>
+
+  <a href="/">Homie home home</a>
+</div>
