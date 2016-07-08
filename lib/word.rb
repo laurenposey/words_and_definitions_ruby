@@ -1,3 +1,5 @@
+require('definition')
+
 class Word
 @@word_list = []
 
@@ -45,7 +47,8 @@ class Word
     word_meanings = []
     definition = Definition.new(word_definition)
     definition.save()
-    @word_meanings.push(definiton)
+    @word_meanings.push(definition)
   end
+
 
 end
