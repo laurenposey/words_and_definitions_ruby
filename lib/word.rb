@@ -44,6 +44,7 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
-    @word_meanings << definition.get_def
+    @word_meanings.push(definition)
   end
+
 end

@@ -26,7 +26,14 @@ class Definition
     @@definitions_list = []
   end
 
-  define_singleton_method(:get_def) do
-    @@definitions_list.shift
+  define_singleton_method(:find) do |id|
+    found_definition = nil
+    @@definitions_list.each() do |definition|
+      if definition.id().eql?(id.to_i())
+        found_definition = definition
+      end
+    end
+    found_definition
   end
+
 end

@@ -29,9 +29,9 @@ describe(Definition) do
   end
 
   describe(".all") do
-     it("is empty at first") do
-       expect(Definition.all()).to(eq([]))
-     end
+    it("is empty at first") do
+      expect(Definition.all()).to(eq([]))
+    end
    end
 
   describe(".clear") do
@@ -41,4 +41,15 @@ describe(Definition) do
       expect(Definition.all()).to(eq([]))
     end
   end
+
+  describe(".find") do
+    it("returns a definition by its id number") do
+      test_definition = Definition.new({:meaning=> "cute and adorable ball of fluff"})
+      test_definition.save()
+      test_definition2 = Definition.new({:meaning=> "a young cat"})
+      test_definition2.save()
+      expect(Definition.find(test_definition.id())).to(eq(test_definition))
+    end
+  end
+
 end
