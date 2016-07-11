@@ -1,16 +1,13 @@
 <div>
   <h1><%= @words.word_name() %></h1>
-  <h2>definition:</h2>
-    <div>
-      <ul>
-        <% @words.word_meanings().each do |meaning| %>
-          <li><%= meaning.word_definition() %></li>
-        <% end %>
-      </ul>
-    </div>
+  <h3>Here are all the word_meanings in this word:</h3>
 
-  <a href="/words/<%= @words.id %>/add_definition_form"><button class="btn btn-default" type="button">Add Definition</button></a>
+  <ul>
+    <% @word.word_meanings().each() do |word_meaning| %>
+      <li><a href="/definitions/<%= word_meaning.id() %>"><%= word_meaning.add_definition() %></a></li>
+    <% end %>
+  </ul>
 
-  <h2>Return to <a href="/words">dictionary</a></h2>
-  <a href="/">Homie home</a>
+  <a href="/words/<%= @word.id%>/definitions/new">Add a new definition</a>
+  <a href="/">Return to Main Page</a>
 </div>

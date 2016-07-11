@@ -1,11 +1,11 @@
 
 
 class Word
-@@word_list = []
+@@words = []
 
   define_method(:initialize) do |word_name|
     @word_name = word_name
-    @id = @@word_list.length().+(1)
+    @id = @@words.length().+(1)
     @word_meanings = []
   end
 
@@ -18,20 +18,20 @@ class Word
   end
 
   define_method(:save) do
-    @@word_list.push(self)
+    @@words.push(self)
   end
 
   define_singleton_method(:all) do
-    @@word_list
+    @@words
   end
 
   define_singleton_method(:clear) do
-    @@word_list = []
+    @@words = []
   end
 
   define_singleton_method(:find) do |id|
     found_word = nil
-    @@word_list.each() do |word|
+    @@words.each() do |word|
       if word.id().eql?(id)
         found_word = word
       end
