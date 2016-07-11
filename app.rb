@@ -24,25 +24,14 @@ post('/words') do
   erb(:success)
 end
 
-get('/definitions/:id') do
-  @definition = Definition.find(params.fetch('id').to_i())
-  erb(:definition)
-end
-
 get('/words/:id') do
   @word = Word.find(params.fetch('id').to_i())
   erb(:word)
 end
 
-get('/word/:id/definitions/new') do
+get('/words/:id/definitions/new') do
     @word = Word.find(params.fetch('id').to_i())
-    erb(:dictionary_form)
-end
-
-
-get('/definitions') do
-  @definitions = Definition.all()
-  erb(:definitions)
+    erb(:add_definitions_form)
 end
 
 post('/definitions') do
