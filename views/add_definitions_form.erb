@@ -1,6 +1,10 @@
 <div>
   <h1>Add a definition to <%= @words.word_name() %> </h1>
 
+  <% @word_meanings.each() do |word_meaning| %>
+  <li><%= word_meaning.word_meanings() %></li>
+  <% end %>
+
   <form action="/words/<%= @words.id %>" method="post">
     <label for="word_definition">Your Definition:</label>
     <input type="text" id="word_definition" name="word_definition">

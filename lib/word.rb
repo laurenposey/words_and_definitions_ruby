@@ -1,3 +1,5 @@
+
+
 class Word
 @@word_list = []
 
@@ -42,6 +44,6 @@ class Word
   end
 
   define_method(:add_definition) do |definition|
-    @word_meanings.push(definition)
+    @word_meanings << definition.get_def
   end
 end

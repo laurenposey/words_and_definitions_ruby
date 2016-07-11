@@ -25,4 +25,8 @@ class Definition
   define_singleton_method(:clear) do
     @@definitions_list = []
   end
+
+  define_singleton_method(:get_def) do
+    @@definitions_list.shift
+  end
 end
