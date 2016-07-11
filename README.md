@@ -16,12 +16,15 @@ user inputs a word and the word is displayed in browser. |'word'| 'word'
 user clicks word and is routed to definition page |click event 'word'| definitions page
 user inputs word definition on definitions page and definition is displayed in the browser. |'noun: a single distinct meaningful element of speech or writing' |'noun: a single distinct meaningful element of speech or writing'
 user inputs additional definitions and definitions are displayed in browser. |'verb: choose and use particular words in order to say or write (something).'| 'noun: a single distinct meaningful element of speech or writing. verb: choose and use particular words in order to say or write (something).'
+user inputs additional words and both words are saved and displayed in the bowser.| 'script'| 'word' 'script'
 
 ## Setup/Installation Requirements
 
 * _Establish an internet connection_
 * _Open a web browser_
-* _<a href="https://polite-inuksuk-23162.herokuapp.com/">Click here for Heroku Link</a>.
+* _In terminal run $ bundle_
+* _In terminal run $ ruby app.rb_
+* _<a href="https://limitless-ravine-32612.herokuapp.com/">Click here for Heroku Link</a>._
 
 ## Known Bugs
 
